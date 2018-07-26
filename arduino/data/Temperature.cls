@@ -2,10 +2,10 @@ Class arduino.data.Temperature Extends %Persistent
 {
 
 ///время замера
-Property DateTime As %TimeStamp [InitialExpression = {$zdt($h,3)}];
+Property DateTime As %TimeStamp [InitialExpression = {$zdt($h,3)}, Required ];
 
 ///поле содержащее значение в градусах цельсиях
-Property Temperature As %Numeric;
+Property Temperature As %Numeric [ Required ];
 	
 Storage Default
 {
@@ -25,7 +25,7 @@ Storage Default
 <IdLocation>^arduino.data.TemperatureD</IdLocation>
 <IndexLocation>^arduino.data.TemperatureI</IndexLocation>
 <StreamLocation>^arduino.data.TemperatureS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }
