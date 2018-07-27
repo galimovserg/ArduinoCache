@@ -4,8 +4,8 @@ Class arduino.services.TemperatureService [ Abstract ]
 ClassMethod ConvertToProxyObject(temperature As arduino.data.Temperature) As %ZEN.proxyObject
 {
 	set proxy = ##class(%ZEN.proxyObject).%New()
-	set proxy.value=temperature.Temperature
-	set proxy.DateTime=temperature.DateTime
+	set proxy.value=temperature.value
+	set proxy.dateTime=temperature.dateTime
 	
 	return proxy
 }

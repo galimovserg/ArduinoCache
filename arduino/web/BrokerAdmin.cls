@@ -7,8 +7,8 @@ Parameter HandleCorsRequest = 1;
 
 XData UrlMap
 {
-<Routes><Route Url="/temeratures/:beginTime/:endTime" Method="GET" Call="arduino.services.TemperatureService:getTemperatures" />
-    	    
+<Routes>
+    <Route Url="/temperatures/:beginTime/:endTime" Method="GET" Call="arduino.services.TemperatureService:getTemperatures" />    	    
 </Routes>
 }
 
